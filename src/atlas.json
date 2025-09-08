@@ -1,0 +1,3229 @@
+{
+    "software": {
+        "name": "rTexPacker v5.0",
+        "url": "https://www.raylibtech.com/rtexpacker"
+    },
+    "atlas": {
+        "imagePath": ".json.png",
+        "width": 1024,
+        "height": 1024,
+        "spriteCount": 189,
+        "isFont": true,
+        "fontSize": 127
+    },
+    "sprites": [
+        {
+            "nameId": "DroidSans-U0020",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 1 },
+            "sourceSize": { "width": 28, "height": 127 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 28, "height": 127 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 32,
+                "offset": { "x": 0, "y": 0 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U0021",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 309, "y": 627 },
+            "sourceSize": { "width": 23, "height": 88 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 23, "height": 88 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 33,
+                "offset": { "x": 3, "y": 19 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U0022",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 370, "y": 960 },
+            "sourceSize": { "width": 38, "height": 37 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 38, "height": 37 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 34,
+                "offset": { "x": 3, "y": 19 },
+                "advanceX": 43
+            }
+        },
+        {
+            "nameId": "DroidSans-U0023",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 420, "y": 717 },
+            "sourceSize": { "width": 74, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 74, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 35,
+                "offset": { "x": -2, "y": 19 },
+                "advanceX": 70
+            }
+        },
+        {
+            "nameId": "DroidSans-U0024",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 556, "y": 240 },
+            "sourceSize": { "width": 55, "height": 98 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 98 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 36,
+                "offset": { "x": 2, "y": 14 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0025",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 117, "y": 536 },
+            "sourceSize": { "width": 88, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 88, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 37,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 90
+            }
+        },
+        {
+            "nameId": "DroidSans-U0026",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 583, "y": 536 },
+            "sourceSize": { "width": 78, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 78, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 38,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U0027",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 350, "y": 960 },
+            "sourceSize": { "width": 19, "height": 37 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 19, "height": 37 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 39,
+                "offset": { "x": 3, "y": 19 },
+                "advanceX": 24
+            }
+        },
+        {
+            "nameId": "DroidSans-U0028",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 314, "y": 240 },
+            "sourceSize": { "width": 34, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 34, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 40,
+                "offset": { "x": 0, "y": 19 },
+                "advanceX": 32
+            }
+        },
+        {
+            "nameId": "DroidSans-U0029",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 467, "y": 240 },
+            "sourceSize": { "width": 34, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 34, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 41,
+                "offset": { "x": -1, "y": 19 },
+                "advanceX": 32
+            }
+        },
+        {
+            "nameId": "DroidSans-U002A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 749, "y": 891 },
+            "sourceSize": { "width": 60, "height": 58 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 60, "height": 58 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 42,
+                "offset": { "x": 0, "y": 14 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U002B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 568, "y": 891 },
+            "sourceSize": { "width": 58, "height": 59 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 59 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 43,
+                "offset": { "x": 1, "y": 33 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U002C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 409, "y": 960 },
+            "sourceSize": { "width": 26, "height": 36 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 26, "height": 36 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 44,
+                "offset": { "x": -1, "y": 84 },
+                "advanceX": 27
+            }
+        },
+        {
+            "nameId": "DroidSans-U002D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 574, "y": 960 },
+            "sourceSize": { "width": 35, "height": 18 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 35, "height": 18 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 45,
+                "offset": { "x": 0, "y": 63 },
+                "advanceX": 35
+            }
+        },
+        {
+            "nameId": "DroidSans-U002E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 467, "y": 960 },
+            "sourceSize": { "width": 23, "height": 24 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 23, "height": 24 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 46,
+                "offset": { "x": 3, "y": 83 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U002F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 182, "y": 804 },
+            "sourceSize": { "width": 47, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 47, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 47,
+                "offset": { "x": -3, "y": 19 },
+                "advanceX": 40
+            }
+        },
+        {
+            "nameId": "DroidSans-U0030",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 796, "y": 536 },
+            "sourceSize": { "width": 58, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 48,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0031",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 924, "y": 717 },
+            "sourceSize": { "width": 37, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 37, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 49,
+                "offset": { "x": 5, "y": 19 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0032",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 211, "y": 627 },
+            "sourceSize": { "width": 57, "height": 88 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 88 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 50,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0033",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 670, "y": 442 },
+            "sourceSize": { "width": 58, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 51,
+                "offset": { "x": 0, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0034",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 539, "y": 627 },
+            "sourceSize": { "width": 65, "height": 87 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 65, "height": 87 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 52,
+                "offset": { "x": -3, "y": 18 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0035",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 129, "y": 627 },
+            "sourceSize": { "width": 57, "height": 88 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 88 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 53,
+                "offset": { "x": 2, "y": 19 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0036",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 729, "y": 442 },
+            "sourceSize": { "width": 58, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 54,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0037",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 598, "y": 717 },
+            "sourceSize": { "width": 59, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 55,
+                "offset": { "x": 0, "y": 19 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0038",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 788, "y": 442 },
+            "sourceSize": { "width": 58, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 56,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0039",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 903, "y": 442 },
+            "sourceSize": { "width": 58, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 57,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U003A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 752, "y": 804 },
+            "sourceSize": { "width": 23, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 23, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 58,
+                "offset": { "x": 3, "y": 37 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U003B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 294, "y": 804 },
+            "sourceSize": { "width": 27, "height": 83 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 27, "height": 83 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 59,
+                "offset": { "x": -1, "y": 37 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U003C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 509, "y": 891 },
+            "sourceSize": { "width": 58, "height": 63 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 63 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 60,
+                "offset": { "x": 1, "y": 30 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U003D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 232, "y": 960 },
+            "sourceSize": { "width": 58, "height": 39 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 39 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 61,
+                "offset": { "x": 1, "y": 43 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U003E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 450, "y": 891 },
+            "sourceSize": { "width": 58, "height": 63 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 63 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 62,
+                "offset": { "x": 1, "y": 30 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U003F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 66, "y": 536 },
+            "sourceSize": { "width": 50, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 63,
+                "offset": { "x": -3, "y": 17 },
+                "advanceX": 46
+            }
+        },
+        {
+            "nameId": "DroidSans-U0040",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 612, "y": 240 },
+            "sourceSize": { "width": 92, "height": 96 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 92, "height": 96 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 64,
+                "offset": { "x": 1, "y": 19 },
+                "advanceX": 94
+            }
+        },
+        {
+            "nameId": "DroidSans-U0041",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 400, "y": 627 },
+            "sourceSize": { "width": 75, "height": 87 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 87 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 65,
+                "offset": { "x": -4, "y": 18 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U0042",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 804 },
+            "sourceSize": { "width": 60, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 60, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 66,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 67
+            }
+        },
+        {
+            "nameId": "DroidSans-U0043",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 206, "y": 536 },
+            "sourceSize": { "width": 65, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 65, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 67,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 65
+            }
+        },
+        {
+            "nameId": "DroidSans-U0044",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 702, "y": 627 },
+            "sourceSize": { "width": 66, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 68,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 74
+            }
+        },
+        {
+            "nameId": "DroidSans-U0045",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 195, "y": 717 },
+            "sourceSize": { "width": 50, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 69,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U0046",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 369, "y": 717 },
+            "sourceSize": { "width": 50, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 70,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U0047",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 512, "y": 536 },
+            "sourceSize": { "width": 70, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 70, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 71,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 75
+            }
+        },
+        {
+            "nameId": "DroidSans-U0048",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 495, "y": 717 },
+            "sourceSize": { "width": 64, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 64, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 72,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U0049",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 560, "y": 717 },
+            "sourceSize": { "width": 37, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 37, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 73,
+                "offset": { "x": 0, "y": 19 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U004A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 881, "y": 129 },
+            "sourceSize": { "width": 38, "height": 107 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 38, "height": 107 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 74,
+                "offset": { "x": -14, "y": 19 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U004B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 658, "y": 717 },
+            "sourceSize": { "width": 62, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 62, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 75,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "DroidSans-U004C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 721, "y": 717 },
+            "sourceSize": { "width": 50, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 76,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U004D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 772, "y": 717 },
+            "sourceSize": { "width": 83, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 83, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 77,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 94
+            }
+        },
+        {
+            "nameId": "DroidSans-U004E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 856, "y": 717 },
+            "sourceSize": { "width": 67, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 67, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 78,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 79
+            }
+        },
+        {
+            "nameId": "DroidSans-U004F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 662, "y": 536 },
+            "sourceSize": { "width": 77, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 79,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U0050",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 962, "y": 717 },
+            "sourceSize": { "width": 56, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 56, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 80,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U0051",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 735, "y": 129 },
+            "sourceSize": { "width": 77, "height": 107 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 107 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 81,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U0052",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 119, "y": 804 },
+            "sourceSize": { "width": 62, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 62, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 82,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U0053",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 614, "y": 442 },
+            "sourceSize": { "width": 55, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 83,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 56
+            }
+        },
+        {
+            "nameId": "DroidSans-U0054",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 230, "y": 804 },
+            "sourceSize": { "width": 63, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 63, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 84,
+                "offset": { "x": -3, "y": 19 },
+                "advanceX": 56
+            }
+        },
+        {
+            "nameId": "DroidSans-U0055",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 333, "y": 627 },
+            "sourceSize": { "width": 66, "height": 88 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 88 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 85,
+                "offset": { "x": 5, "y": 19 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U0056",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 769, "y": 627 },
+            "sourceSize": { "width": 70, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 70, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 86,
+                "offset": { "x": -4, "y": 19 },
+                "advanceX": 61
+            }
+        },
+        {
+            "nameId": "DroidSans-U0057",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 840, "y": 627 },
+            "sourceSize": { "width": 103, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 103, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 87,
+                "offset": { "x": -3, "y": 19 },
+                "advanceX": 96
+            }
+        },
+        {
+            "nameId": "DroidSans-U0058",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 944, "y": 627 },
+            "sourceSize": { "width": 68, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 68, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 88,
+                "offset": { "x": -4, "y": 19 },
+                "advanceX": 59
+            }
+        },
+        {
+            "nameId": "DroidSans-U0059",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 717 },
+            "sourceSize": { "width": 66, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 89,
+                "offset": { "x": -4, "y": 19 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U005A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 135, "y": 717 },
+            "sourceSize": { "width": 59, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 90,
+                "offset": { "x": 0, "y": 19 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U005B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 250, "y": 240 },
+            "sourceSize": { "width": 31, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 31, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 91,
+                "offset": { "x": 4, "y": 19 },
+                "advanceX": 33
+            }
+        },
+        {
+            "nameId": "DroidSans-U005C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 246, "y": 717 },
+            "sourceSize": { "width": 47, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 47, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 92,
+                "offset": { "x": -3, "y": 19 },
+                "advanceX": 40
+            }
+        },
+        {
+            "nameId": "DroidSans-U005D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 282, "y": 240 },
+            "sourceSize": { "width": 31, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 31, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 93,
+                "offset": { "x": -2, "y": 19 },
+                "advanceX": 33
+            }
+        },
+        {
+            "nameId": "DroidSans-U005E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 686, "y": 891 },
+            "sourceSize": { "width": 62, "height": 58 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 62, "height": 58 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 94,
+                "offset": { "x": -2, "y": 18 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U005F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 610, "y": 960 },
+            "sourceSize": { "width": 55, "height": 17 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 17 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 95,
+                "offset": { "x": -5, "y": 106 },
+                "advanceX": 44
+            }
+        },
+        {
+            "nameId": "DroidSans-U0060",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 436, "y": 960 },
+            "sourceSize": { "width": 30, "height": 26 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 30, "height": 26 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 96,
+                "offset": { "x": 16, "y": 13 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U0061",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 485, "y": 804 },
+            "sourceSize": { "width": 53, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 97,
+                "offset": { "x": 1, "y": 37 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U0062",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 59, "y": 442 },
+            "sourceSize": { "width": 57, "height": 93 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 93 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 98,
+                "offset": { "x": 5, "y": 14 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "DroidSans-U0063",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 826, "y": 804 },
+            "sourceSize": { "width": 49, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 49, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 99,
+                "offset": { "x": 2, "y": 37 },
+                "advanceX": 50
+            }
+        },
+        {
+            "nameId": "DroidSans-U0064",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 442 },
+            "sourceSize": { "width": 57, "height": 93 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 93 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 100,
+                "offset": { "x": 2, "y": 14 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "DroidSans-U0065",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 696, "y": 804 },
+            "sourceSize": { "width": 55, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 101,
+                "offset": { "x": 2, "y": 37 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U0066",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 215, "y": 442 },
+            "sourceSize": { "width": 48, "height": 92 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 48, "height": 92 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 102,
+                "offset": { "x": -3, "y": 13 },
+                "advanceX": 35
+            }
+        },
+        {
+            "nameId": "DroidSans-U0067",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 813, "y": 240 },
+            "sourceSize": { "width": 62, "height": 95 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 62, "height": 95 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 103,
+                "offset": { "x": -3, "y": 37 },
+                "advanceX": 56
+            }
+        },
+        {
+            "nameId": "DroidSans-U0068",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 558, "y": 442 },
+            "sourceSize": { "width": 55, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 104,
+                "offset": { "x": 5, "y": 14 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U0069",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 52, "y": 627 },
+            "sourceSize": { "width": 20, "height": 89 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 20, "height": 89 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 105,
+                "offset": { "x": 4, "y": 16 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U006A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 168, "y": 1 },
+            "sourceSize": { "width": 32, "height": 116 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 32, "height": 116 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 106,
+                "offset": { "x": -8, "y": 16 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U006B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 371, "y": 442 },
+            "sourceSize": { "width": 53, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 107,
+                "offset": { "x": 5, "y": 14 },
+                "advanceX": 54
+            }
+        },
+        {
+            "nameId": "DroidSans-U006C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 425, "y": 442 },
+            "sourceSize": { "width": 18, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 18, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 108,
+                "offset": { "x": 5, "y": 14 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U006D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 891 },
+            "sourceSize": { "width": 89, "height": 68 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 89, "height": 68 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 109,
+                "offset": { "x": 5, "y": 37 },
+                "advanceX": 97
+            }
+        },
+        {
+            "nameId": "DroidSans-U006E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 133, "y": 891 },
+            "sourceSize": { "width": 55, "height": 68 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 68 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 110,
+                "offset": { "x": 5, "y": 37 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U006F",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 539, "y": 804 },
+            "sourceSize": { "width": 59, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 111,
+                "offset": { "x": 2, "y": 37 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U0070",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 954, "y": 240 },
+            "sourceSize": { "width": 57, "height": 95 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 95 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 112,
+                "offset": { "x": 5, "y": 37 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "DroidSans-U0071",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 705, "y": 240 },
+            "sourceSize": { "width": 57, "height": 95 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 95 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 113,
+                "offset": { "x": 2, "y": 37 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "DroidSans-U0072",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 91, "y": 891 },
+            "sourceSize": { "width": 41, "height": 68 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 41, "height": 68 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 114,
+                "offset": { "x": 5, "y": 37 },
+                "advanceX": 43
+            }
+        },
+        {
+            "nameId": "DroidSans-U0073",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 776, "y": 804 },
+            "sourceSize": { "width": 49, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 49, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 115,
+                "offset": { "x": 0, "y": 37 },
+                "advanceX": 49
+            }
+        },
+        {
+            "nameId": "DroidSans-U0074",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 322, "y": 804 },
+            "sourceSize": { "width": 42, "height": 82 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 42, "height": 82 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 116,
+                "offset": { "x": -3, "y": 25 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U0075",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 966, "y": 804 },
+            "sourceSize": { "width": 55, "height": 69 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 69 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 117,
+                "offset": { "x": 4, "y": 38 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U0076",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 339, "y": 891 },
+            "sourceSize": { "width": 61, "height": 67 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 61, "height": 67 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 118,
+                "offset": { "x": -4, "y": 38 },
+                "advanceX": 52
+            }
+        },
+        {
+            "nameId": "DroidSans-U0077",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 189, "y": 891 },
+            "sourceSize": { "width": 88, "height": 67 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 88, "height": 67 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 119,
+                "offset": { "x": -3, "y": 38 },
+                "advanceX": 81
+            }
+        },
+        {
+            "nameId": "DroidSans-U0078",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 278, "y": 891 },
+            "sourceSize": { "width": 60, "height": 67 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 60, "height": 67 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 120,
+                "offset": { "x": -3, "y": 38 },
+                "advanceX": 54
+            }
+        },
+        {
+            "nameId": "DroidSans-U0079",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 792, "y": 347 },
+            "sourceSize": { "width": 61, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 61, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 121,
+                "offset": { "x": -4, "y": 38 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U007A",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 401, "y": 891 },
+            "sourceSize": { "width": 48, "height": 67 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 48, "height": 67 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 122,
+                "offset": { "x": 0, "y": 38 },
+                "advanceX": 48
+            }
+        },
+        {
+            "nameId": "DroidSans-U007B",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 425, "y": 240 },
+            "sourceSize": { "width": 41, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 41, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 123,
+                "offset": { "x": -1, "y": 19 },
+                "advanceX": 38
+            }
+        },
+        {
+            "nameId": "DroidSans-U007C",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 92, "y": 1 },
+            "sourceSize": { "width": 17, "height": 118 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 17, "height": 118 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 124,
+                "offset": { "x": 22, "y": 14 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U007D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 207, "y": 240 },
+            "sourceSize": { "width": 42, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 42, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 125,
+                "offset": { "x": -2, "y": 19 },
+                "advanceX": 38
+            }
+        },
+        {
+            "nameId": "DroidSans-U007E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 491, "y": 960 },
+            "sourceSize": { "width": 58, "height": 23 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 23 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 126,
+                "offset": { "x": 1, "y": 51 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00A1",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 187, "y": 627 },
+            "sourceSize": { "width": 23, "height": 88 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 23, "height": 88 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 161,
+                "offset": { "x": 3, "y": 37 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U00A2",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 962, "y": 442 },
+            "sourceSize": { "width": 49, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 49, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 162,
+                "offset": { "x": 6, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00A3",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 476, "y": 627 },
+            "sourceSize": { "width": 62, "height": 87 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 62, "height": 87 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 163,
+                "offset": { "x": -1, "y": 18 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U20AC",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 536 },
+            "sourceSize": { "width": 64, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 64, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 8364,
+                "offset": { "x": -1, "y": 17 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00A5",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 68, "y": 717 },
+            "sourceSize": { "width": 66, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 165,
+                "offset": { "x": -3, "y": 19 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U0160",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 608, "y": 1 },
+            "sourceSize": { "width": 55, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 352,
+                "offset": { "x": 1, "y": -5 },
+                "advanceX": 56
+            }
+        },
+        {
+            "nameId": "DroidSans-U00A7",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 117, "y": 442 },
+            "sourceSize": { "width": 48, "height": 93 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 48, "height": 93 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 167,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U0161",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 165, "y": 347 },
+            "sourceSize": { "width": 49, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 49, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 353,
+                "offset": { "x": 0, "y": 13 },
+                "advanceX": 49
+            }
+        },
+        {
+            "nameId": "DroidSans-U00A9",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 272, "y": 536 },
+            "sourceSize": { "width": 89, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 89, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 169,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 90
+            }
+        },
+        {
+            "nameId": "DroidSans-U00AA",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 151, "y": 960 },
+            "sourceSize": { "width": 36, "height": 46 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 36, "height": 46 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 170,
+                "offset": { "x": -1, "y": 18 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00AB",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 922, "y": 891 },
+            "sourceSize": { "width": 53, "height": 54 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 54 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 171,
+                "offset": { "x": 0, "y": 45 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U00AC",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 291, "y": 960 },
+            "sourceSize": { "width": 58, "height": 38 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 38 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 172,
+                "offset": { "x": 1, "y": 54 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00AE",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 362, "y": 536 },
+            "sourceSize": { "width": 89, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 89, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 174,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 90
+            }
+        },
+        {
+            "nameId": "DroidSans-U00AF",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 666, "y": 960 },
+            "sourceSize": { "width": 64, "height": 17 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 64, "height": 17 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 175,
+                "offset": { "x": -5, "y": 6 },
+                "advanceX": 54
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B0",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 188, "y": 960 },
+            "sourceSize": { "width": 43, "height": 43 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 43, "height": 43 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 176,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 46
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B1",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 426, "y": 804 },
+            "sourceSize": { "width": 58, "height": 72 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 72 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 177,
+                "offset": { "x": 1, "y": 33 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B2",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 851, "y": 891 },
+            "sourceSize": { "width": 40, "height": 56 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 40, "height": 56 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 178,
+                "offset": { "x": -2, "y": 18 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B3",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 810, "y": 891 },
+            "sourceSize": { "width": 40, "height": 57 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 40, "height": 57 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 179,
+                "offset": { "x": -3, "y": 18 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U017D",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 77, "y": 129 },
+            "sourceSize": { "width": 59, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 381,
+                "offset": { "x": 0, "y": -5 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B5",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 109, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 181,
+                "offset": { "x": 5, "y": 38 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B6",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 144, "y": 240 },
+            "sourceSize": { "width": 62, "height": 105 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 62, "height": 105 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 182,
+                "offset": { "x": 2, "y": 14 },
+                "advanceX": 71
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B7",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 550, "y": 960 },
+            "sourceSize": { "width": 23, "height": 23 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 23, "height": 23 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 183,
+                "offset": { "x": 3, "y": 51 },
+                "advanceX": 29
+            }
+        },
+        {
+            "nameId": "DroidSans-U017E",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 166, "y": 442 },
+            "sourceSize": { "width": 48, "height": 92 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 48, "height": 92 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 382,
+                "offset": { "x": 0, "y": 13 },
+                "advanceX": 48
+            }
+        },
+        {
+            "nameId": "DroidSans-U00B9",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 892, "y": 891 },
+            "sourceSize": { "width": 29, "height": 55 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 29, "height": 55 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 185,
+                "offset": { "x": -1, "y": 19 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00BA",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 110, "y": 960 },
+            "sourceSize": { "width": 40, "height": 46 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 40, "height": 46 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 186,
+                "offset": { "x": -1, "y": 18 },
+                "advanceX": 38
+            }
+        },
+        {
+            "nameId": "DroidSans-U00BB",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 56, "y": 960 },
+            "sourceSize": { "width": 53, "height": 54 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 54 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 187,
+                "offset": { "x": 0, "y": 45 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U0152",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 909, "y": 536 },
+            "sourceSize": { "width": 93, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 93, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 338,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 97
+            }
+        },
+        {
+            "nameId": "DroidSans-U0153",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 599, "y": 804 },
+            "sourceSize": { "width": 96, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 96, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 339,
+                "offset": { "x": 2, "y": 37 },
+                "advanceX": 99
+            }
+        },
+        {
+            "nameId": "DroidSans-U0178",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 240 },
+            "sourceSize": { "width": 66, "height": 106 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 106 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 376,
+                "offset": { "x": -4, "y": -1 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00BF",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 627 },
+            "sourceSize": { "width": 50, "height": 89 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 89 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 191,
+                "offset": { "x": -1, "y": 37 },
+                "advanceX": 46
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C0",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 866, "y": 1 },
+            "sourceSize": { "width": 75, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 192,
+                "offset": { "x": -4, "y": -5 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C1",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 942, "y": 1 },
+            "sourceSize": { "width": 75, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 193,
+                "offset": { "x": -4, "y": -5 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C2",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 129 },
+            "sourceSize": { "width": 75, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 194,
+                "offset": { "x": -4, "y": -5 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C3",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 659, "y": 129 },
+            "sourceSize": { "width": 75, "height": 107 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 107 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 195,
+                "offset": { "x": -4, "y": -2 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C4",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 68, "y": 240 },
+            "sourceSize": { "width": 75, "height": 106 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 106 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 196,
+                "offset": { "x": -4, "y": -1 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C5",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 349, "y": 240 },
+            "sourceSize": { "width": 75, "height": 104 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 75, "height": 104 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 197,
+                "offset": { "x": -4, "y": 1 },
+                "advanceX": 66
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C6",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 605, "y": 627 },
+            "sourceSize": { "width": 96, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 96, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 198,
+                "offset": { "x": -5, "y": 19 },
+                "advanceX": 92
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C7",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 201, "y": 1 },
+            "sourceSize": { "width": 65, "height": 115 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 65, "height": 115 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 199,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 65
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C8",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 137, "y": 129 },
+            "sourceSize": { "width": 50, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 200,
+                "offset": { "x": 6, "y": -5 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00C9",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 188, "y": 129 },
+            "sourceSize": { "width": 50, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 201,
+                "offset": { "x": 6, "y": -5 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00CA",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 306, "y": 129 },
+            "sourceSize": { "width": 50, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 202,
+                "offset": { "x": 6, "y": -5 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00CB",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 920, "y": 129 },
+            "sourceSize": { "width": 50, "height": 106 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 50, "height": 106 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 203,
+                "offset": { "x": 6, "y": -1 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00CC",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 357, "y": 129 },
+            "sourceSize": { "width": 38, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 38, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 204,
+                "offset": { "x": -1, "y": -5 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00CD",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 396, "y": 129 },
+            "sourceSize": { "width": 39, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 39, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 205,
+                "offset": { "x": 0, "y": -5 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00CE",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 820, "y": 1 },
+            "sourceSize": { "width": 45, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 45, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 206,
+                "offset": { "x": -4, "y": -5 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00CF",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 971, "y": 129 },
+            "sourceSize": { "width": 39, "height": 106 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 39, "height": 106 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 207,
+                "offset": { "x": -1, "y": -1 },
+                "advanceX": 36
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D0",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 294, "y": 717 },
+            "sourceSize": { "width": 74, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 74, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 208,
+                "offset": { "x": -2, "y": 19 },
+                "advanceX": 74
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D1",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 813, "y": 129 },
+            "sourceSize": { "width": 67, "height": 107 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 67, "height": 107 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 209,
+                "offset": { "x": 6, "y": -2 },
+                "advanceX": 79
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D2",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 664, "y": 1 },
+            "sourceSize": { "width": 77, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 210,
+                "offset": { "x": 2, "y": -5 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D3",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 742, "y": 1 },
+            "sourceSize": { "width": 77, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 211,
+                "offset": { "x": 2, "y": -5 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D4",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 329, "y": 1 },
+            "sourceSize": { "width": 77, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 212,
+                "offset": { "x": 2, "y": -5 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D5",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 436, "y": 129 },
+            "sourceSize": { "width": 77, "height": 109 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 109 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 213,
+                "offset": { "x": 2, "y": -2 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D6",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 514, "y": 129 },
+            "sourceSize": { "width": 77, "height": 108 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 108 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 214,
+                "offset": { "x": 2, "y": -1 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D7",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 960 },
+            "sourceSize": { "width": 54, "height": 54 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 54, "height": 54 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 215,
+                "offset": { "x": 3, "y": 35 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D8",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 876, "y": 240 },
+            "sourceSize": { "width": 77, "height": 95 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 77, "height": 95 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 216,
+                "offset": { "x": 2, "y": 15 },
+                "advanceX": 80
+            }
+        },
+        {
+            "nameId": "DroidSans-U00D9",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 407, "y": 1 },
+            "sourceSize": { "width": 66, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 217,
+                "offset": { "x": 5, "y": -5 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U00DA",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 474, "y": 1 },
+            "sourceSize": { "width": 66, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 218,
+                "offset": { "x": 5, "y": -5 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U00DB",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 541, "y": 1 },
+            "sourceSize": { "width": 66, "height": 112 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 112 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 219,
+                "offset": { "x": 5, "y": -5 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U00DC",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 592, "y": 129 },
+            "sourceSize": { "width": 66, "height": 108 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 108 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 220,
+                "offset": { "x": 5, "y": -1 },
+                "advanceX": 76
+            }
+        },
+        {
+            "nameId": "DroidSans-U00DD",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 239, "y": 129 },
+            "sourceSize": { "width": 66, "height": 110 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 66, "height": 110 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 221,
+                "offset": { "x": -4, "y": -5 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00DE",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 62, "y": 804 },
+            "sourceSize": { "width": 56, "height": 86 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 56, "height": 86 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 222,
+                "offset": { "x": 6, "y": 19 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00DF",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 854, "y": 347 },
+            "sourceSize": { "width": 60, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 60, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 223,
+                "offset": { "x": 5, "y": 13 },
+                "advanceX": 65
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E0",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 915, "y": 347 },
+            "sourceSize": { "width": 53, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 224,
+                "offset": { "x": 1, "y": 13 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E1",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 1, "y": 347 },
+            "sourceSize": { "width": 53, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 225,
+                "offset": { "x": 1, "y": 13 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E2",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 55, "y": 347 },
+            "sourceSize": { "width": 53, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 226,
+                "offset": { "x": 1, "y": 13 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E3",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 444, "y": 442 },
+            "sourceSize": { "width": 53, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 227,
+                "offset": { "x": 1, "y": 16 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E4",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 855, "y": 536 },
+            "sourceSize": { "width": 53, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 228,
+                "offset": { "x": 1, "y": 17 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E5",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 502, "y": 240 },
+            "sourceSize": { "width": 53, "height": 100 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 53, "height": 100 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 229,
+                "offset": { "x": 1, "y": 7 },
+                "advanceX": 57
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E6",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 876, "y": 804 },
+            "sourceSize": { "width": 89, "height": 70 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 89, "height": 70 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 230,
+                "offset": { "x": 1, "y": 37 },
+                "advanceX": 90
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E7",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 763, "y": 240 },
+            "sourceSize": { "width": 49, "height": 95 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 49, "height": 95 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 231,
+                "offset": { "x": 2, "y": 37 },
+                "advanceX": 50
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E8",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 215, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 232,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U00E9",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 271, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 233,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U00EA",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 327, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 234,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U00EB",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 847, "y": 442 },
+            "sourceSize": { "width": 55, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 235,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 58
+            }
+        },
+        {
+            "nameId": "DroidSans-U00EC",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 264, "y": 442 },
+            "sourceSize": { "width": 30, "height": 92 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 30, "height": 92 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 236,
+                "offset": { "x": -6, "y": 13 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U00ED",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 295, "y": 442 },
+            "sourceSize": { "width": 30, "height": 92 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 30, "height": 92 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 237,
+                "offset": { "x": 5, "y": 13 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U00EE",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 326, "y": 442 },
+            "sourceSize": { "width": 44, "height": 92 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 44, "height": 92 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 238,
+                "offset": { "x": -8, "y": 13 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U00EF",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 269, "y": 627 },
+            "sourceSize": { "width": 39, "height": 88 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 39, "height": 88 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 239,
+                "offset": { "x": -5, "y": 17 },
+                "advanceX": 28
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F0",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 383, "y": 347 },
+            "sourceSize": { "width": 60, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 60, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 240,
+                "offset": { "x": 1, "y": 13 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F1",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 73, "y": 627 },
+            "sourceSize": { "width": 55, "height": 89 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 89 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 241,
+                "offset": { "x": 5, "y": 16 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F2",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 444, "y": 347 },
+            "sourceSize": { "width": 59, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 242,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F3",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 504, "y": 347 },
+            "sourceSize": { "width": 59, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 243,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F4",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 564, "y": 347 },
+            "sourceSize": { "width": 59, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 244,
+                "offset": { "x": 2, "y": 13 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F5",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 498, "y": 442 },
+            "sourceSize": { "width": 59, "height": 91 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 91 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 245,
+                "offset": { "x": 2, "y": 16 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F6",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 452, "y": 536 },
+            "sourceSize": { "width": 59, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 59, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 246,
+                "offset": { "x": 2, "y": 17 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F7",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 627, "y": 891 },
+            "sourceSize": { "width": 58, "height": 59 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 58, "height": 59 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 247,
+                "offset": { "x": 1, "y": 33 },
+                "advanceX": 60
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F8",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 365, "y": 804 },
+            "sourceSize": { "width": 60, "height": 76 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 60, "height": 76 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 248,
+                "offset": { "x": 2, "y": 34 },
+                "advanceX": 62
+            }
+        },
+        {
+            "nameId": "DroidSans-U00F9",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 624, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 249,
+                "offset": { "x": 4, "y": 13 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U00FA",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 680, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 250,
+                "offset": { "x": 4, "y": 13 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U00FB",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 736, "y": 347 },
+            "sourceSize": { "width": 55, "height": 94 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 94 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 251,
+                "offset": { "x": 4, "y": 13 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U00FC",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 740, "y": 536 },
+            "sourceSize": { "width": 55, "height": 90 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 55, "height": 90 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 252,
+                "offset": { "x": 4, "y": 17 },
+                "advanceX": 64
+            }
+        },
+        {
+            "nameId": "DroidSans-U00FD",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 30, "y": 1 },
+            "sourceSize": { "width": 61, "height": 119 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 61, "height": 119 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 253,
+                "offset": { "x": -4, "y": 13 },
+                "advanceX": 53
+            }
+        },
+        {
+            "nameId": "DroidSans-U00FE",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 110, "y": 1 },
+            "sourceSize": { "width": 57, "height": 118 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 57, "height": 118 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 254,
+                "offset": { "x": 5, "y": 14 },
+                "advanceX": 63
+            }
+        },
+        {
+            "nameId": "DroidSans-U00FF",
+            "tag": "",
+            "origin": { "x": 0, "y": 0 },
+            "position": { "x": 267, "y": 1 },
+            "sourceSize": { "width": 61, "height": 115 },
+            "padding": 0,
+            "trimmed": false,
+            "trimRec": { "x": 0, "y": 0, "width": 61, "height": 115 },
+            "colliderType": 0,
+            "colliderInfo": { "x": 0, "y": 0, "sizeX": 0, "sizeY": 0 },
+            "char": {
+                "value": 255,
+                "offset": { "x": -4, "y": 17 },
+                "advanceX": 53
+            }
+        }
+    ]
+}
