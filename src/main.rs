@@ -45,19 +45,17 @@ struct App {
 }
 
 impl App {
-    fn new() -> Self {
+    async fn new() -> Self {
         let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor::default());
 
         let adapter = instance.request_adapter(&wgpu::RequestAdapterOptionsBase::default());
 
-        let (device, queue) = block_on(async {
-            adapter
-                .await
-                .unwrap()
-                .request_device(&wgpu::DeviceDescriptor::default())
-                .await
-                .unwrap()
-        });
+        let (device, queue) = adapter
+            .await
+            .unwrap()
+            .request_device(&wgpu::DeviceDescriptor::default())
+            .await
+            .unwrap();
 
         Self {
             windows: std::collections::HashMap::new(),
@@ -92,10 +90,11 @@ impl winit::application::ApplicationHandler for App {
 }
 
 fn main() {
-    let event_loop = winit::event_loop::EventLoop::builder().build().unwrap();
-    event_loop.set_control_flow(winit::event_loop::ControlFlow::Wait);
+    block_on(async {
+        let event_loop = winit::event_loop::EventLoop::builder().build().unwrap();
+        let app = App::new();
 
-    let mut app = App::new();
-
-    event_loop.run_app(&mut app).unwrap();
+        event_loop.set_control_flow(winit::event_loop::ControlFlow::Wait);
+        event_loop.run_app(&mut app.await).unwrap();
+    });
 }
