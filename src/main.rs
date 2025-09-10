@@ -32,14 +32,34 @@ trait WindowHandler {
     }
 }
 
-struct Menu {
-    window: winit::window::Window,
+struct Menu<'a> {
+    window: std::sync::Arc<winit::window::Window>,
+    surface: wgpu::Surface<'a>,
 }
 
-impl WindowHandler for Menu {}
+impl Menu<'_> {
+    fn new(
+        instace: &wgpu::Instance,
+        adapter: &wgpu::Adapter,
+        device: &wgpu::Device,
+        window: std::sync::Arc<winit::window::Window>,
+    ) -> Self {
+        let winit::dpi::PhysicalSize { width, height } = window.inner_size();
+
+        let surface = instace.create_surface(window.clone()).unwrap();
+        let config = surface.get_default_config(adapter, width, height).unwrap();
+        surface.configure(device, &config);
+
+        Self { window, surface }
+    }
+}
+
+impl WindowHandler for Menu<'_> {}
 
 struct App {
     windows: std::collections::HashMap<winit::window::WindowId, Box<dyn WindowHandler>>,
+    instance: wgpu::Instance,
+    adapter: wgpu::Adapter,
     device: wgpu::Device,
     queue: wgpu::Queue,
 }
@@ -48,17 +68,20 @@ impl App {
     async fn new() -> Self {
         let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor::default());
 
-        let adapter = instance.request_adapter(&wgpu::RequestAdapterOptionsBase::default());
+        let adapter = instance
+            .request_adapter(&wgpu::RequestAdapterOptionsBase::default())
+            .await
+            .unwrap();
 
         let (device, queue) = adapter
-            .await
-            .unwrap()
             .request_device(&wgpu::DeviceDescriptor::default())
             .await
             .unwrap();
 
         Self {
             windows: std::collections::HashMap::new(),
+            instance,
+            adapter,
             device,
             queue,
         }
@@ -67,14 +90,22 @@ impl App {
 
 impl winit::application::ApplicationHandler for App {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
+        let Self {
+            instance,
+            adapter,
+            device,
+            ..
+        } = &self;
+
         let window = event_loop
             .create_window(winit::window::WindowAttributes::default())
             .unwrap();
 
         let id = window.id();
-        let window_handler = Box::new(Menu { window });
 
-        self.windows.insert(id, window_handler);
+        let window_handler = Menu::new(instance, adapter, device, std::sync::Arc::new(window));
+
+        self.windows.insert(id, Box::new(window_handler));
     }
 
     fn window_event(
