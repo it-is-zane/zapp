@@ -73,17 +73,15 @@ impl Menu<'_> {
 
 impl WindowHandler for Menu<'_> {}
 
-struct App {
-    windows: std::collections::HashMap<winit::window::WindowId, Box<dyn WindowHandler>>,
-    instance: wgpu::Instance,
-    adapter: wgpu::Adapter,
-    device: wgpu::Device,
-    queue: wgpu::Queue,
-    resumed_fn: WindowHandlerInitilizer,
+struct Gpu {
+    pub instance: wgpu::Instance,
+    pub adapter: wgpu::Adapter,
+    pub device: wgpu::Device,
+    pub queue: wgpu::Queue,
 }
 
-impl App {
-    async fn new(resumed_fn: WindowHandlerInitilizer) -> Self {
+impl Gpu {
+    pub async fn new() -> Self {
         let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor::default());
 
         let adapter = instance
@@ -97,11 +95,25 @@ impl App {
             .unwrap();
 
         Self {
-            windows: std::collections::HashMap::new(),
             instance,
             adapter,
             device,
             queue,
+        }
+    }
+}
+
+struct App {
+    windows: std::collections::HashMap<winit::window::WindowId, Box<dyn WindowHandler>>,
+    gpu: Gpu,
+    resumed_fn: WindowHandlerInitilizer,
+}
+
+impl App {
+    async fn new(resumed_fn: WindowHandlerInitilizer) -> Self {
+        Self {
+            windows: std::collections::HashMap::new(),
+            gpu: Gpu::new().await,
             resumed_fn,
         }
     }
@@ -110,10 +122,15 @@ impl App {
 impl winit::application::ApplicationHandler for App {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
         let Self {
-            instance,
-            adapter,
-            device,
-            ..
+            gpu:
+                Gpu {
+                    instance,
+                    adapter,
+                    device,
+                    ..
+                },
+            windows,
+            resumed_fn,
         } = &self;
 
         let window = event_loop
@@ -137,6 +154,13 @@ impl winit::application::ApplicationHandler for App {
             return;
         };
 
+        let Gpu {
+            instance,
+            adapter,
+            device,
+            queue,
+        } = &self.gpu;
+
         match handler.window_event(event_loop, event) {
             Command::Nothing => {}
             Command::RemoveWindow(window_id) => drop(self.windows.remove(&window_id)),
@@ -148,10 +172,10 @@ impl winit::application::ApplicationHandler for App {
                 let id = window.id();
 
                 let window_handler = (f)(
-                    &self.instance,
-                    &self.adapter,
-                    &self.device,
-                    &self.queue,
+                    instance,
+                    adapter,
+                    device,
+                    queue,
                     std::sync::Arc::new(window),
                 );
 
