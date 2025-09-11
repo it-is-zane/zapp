@@ -23,15 +23,8 @@ fn block_on<T>(future: impl std::future::Future<Output = T>) -> T {
     }
 }
 
-type WindowHandlerInitilizer = Box<
-    dyn Fn(
-        &wgpu::Instance,
-        &wgpu::Adapter,
-        &wgpu::Device,
-        &wgpu::Queue,
-        std::sync::Arc<winit::window::Window>,
-    ) -> Box<dyn WindowHandler>,
->;
+type WindowHandlerInitilizer =
+    Box<dyn Fn(&Gpu, std::sync::Arc<winit::window::Window>) -> Box<dyn WindowHandler>>;
 
 enum Command {
     Nothing,
@@ -55,17 +48,14 @@ struct Menu<'a> {
 }
 
 impl Menu<'_> {
-    fn new(
-        instace: &wgpu::Instance,
-        adapter: &wgpu::Adapter,
-        device: &wgpu::Device,
-        window: std::sync::Arc<winit::window::Window>,
-    ) -> Self {
+    fn new(gpu: &Gpu, window: std::sync::Arc<winit::window::Window>) -> Self {
         let winit::dpi::PhysicalSize { width, height } = window.inner_size();
 
-        let surface = instace.create_surface(window.clone()).unwrap();
-        let config = surface.get_default_config(adapter, width, height).unwrap();
-        surface.configure(device, &config);
+        let surface = gpu.instance.create_surface(window.clone()).unwrap();
+        let config = surface
+            .get_default_config(&gpu.adapter, width, height)
+            .unwrap();
+        surface.configure(&gpu.device, &config);
 
         Self { window, surface }
     }
@@ -139,7 +129,7 @@ impl winit::application::ApplicationHandler for App {
 
         let id = window.id();
 
-        let window_handler = Menu::new(instance, adapter, device, std::sync::Arc::new(window));
+        let window_handler = Menu::new(&self.gpu, std::sync::Arc::new(window));
 
         self.windows.insert(id, Box::new(window_handler));
     }
@@ -154,13 +144,6 @@ impl winit::application::ApplicationHandler for App {
             return;
         };
 
-        let Gpu {
-            instance,
-            adapter,
-            device,
-            queue,
-        } = &self.gpu;
-
         match handler.window_event(event_loop, event) {
             Command::Nothing => {}
             Command::RemoveWindow(window_id) => drop(self.windows.remove(&window_id)),
@@ -171,13 +154,7 @@ impl winit::application::ApplicationHandler for App {
 
                 let id = window.id();
 
-                let window_handler = (f)(
-                    instance,
-                    adapter,
-                    device,
-                    queue,
-                    std::sync::Arc::new(window),
-                );
+                let window_handler = (f)(&self.gpu, std::sync::Arc::new(window));
 
                 _ = self.windows.insert(id, window_handler);
             }
@@ -189,9 +166,7 @@ fn main() {
     block_on(async {
         let event_loop = winit::event_loop::EventLoop::builder().build().unwrap();
 
-        let app = App::new(Box::new(|instance, adapter, device, queue, window| {
-            Box::new(Menu::new(instance, adapter, device, window))
-        }));
+        let app = App::new(Box::new(|gpu, window| Box::new(Menu::new(gpu, window))));
 
         event_loop.set_control_flow(winit::event_loop::ControlFlow::Wait);
         event_loop.run_app(&mut app.await).unwrap();
