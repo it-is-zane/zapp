@@ -1,5 +1,6 @@
 #![warn(clippy::pedantic, clippy::all, clippy::nursery)]
 
+// https://doc.rust-lang.org/beta/std/task/trait.Wake.html
 fn block_on<T>(future: impl std::future::Future<Output = T>) -> T {
     struct ThreadWaker(std::thread::Thread);
 
