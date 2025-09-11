@@ -100,10 +100,10 @@ struct App {
 }
 
 impl App {
-    async fn new(resumed_fn: WindowHandlerInitilizer) -> Self {
+    fn new(gpu: Gpu, resumed_fn: WindowHandlerInitilizer) -> Self {
         Self {
             windows: std::collections::HashMap::new(),
-            gpu: Gpu::new().await,
+            gpu,
             resumed_fn,
         }
     }
@@ -166,9 +166,12 @@ fn main() {
     block_on(async {
         let event_loop = winit::event_loop::EventLoop::builder().build().unwrap();
 
-        let app = App::new(Box::new(|gpu, window| Box::new(Menu::new(gpu, window))));
+        let mut app = App::new(
+            Gpu::new().await,
+            Box::new(|gpu, window| Box::new(Menu::new(gpu, window))),
+        );
 
         event_loop.set_control_flow(winit::event_loop::ControlFlow::Wait);
-        event_loop.run_app(&mut app.await).unwrap();
+        event_loop.run_app(&mut app).unwrap();
     });
 }
