@@ -117,20 +117,14 @@ impl App {
 impl winit::application::ApplicationHandler for App {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
         let Self {
-            gpu:
-                Gpu {
-                    instance,
-                    adapter,
-                    device,
-                    ..
-                },
+            gpu,
             windows,
             resumed_fn,
-        } = &self;
+        } = self;
 
-        let (id, window_handler) = (resumed_fn)(&self.gpu, event_loop);
+        let (id, window_handler) = (resumed_fn)(gpu, event_loop);
 
-        self.windows.insert(id, window_handler);
+        windows.insert(id, window_handler);
     }
 
     fn window_event(
