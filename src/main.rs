@@ -47,27 +47,6 @@ trait WindowHandler {
     }
 }
 
-struct Menu<'a> {
-    window: std::sync::Arc<winit::window::Window>,
-    surface: wgpu::Surface<'a>,
-}
-
-impl Menu<'_> {
-    fn new(gpu: &Gpu, window: std::sync::Arc<winit::window::Window>) -> Self {
-        let winit::dpi::PhysicalSize { width, height } = window.inner_size();
-
-        let surface = gpu.instance.create_surface(window.clone()).unwrap();
-        let config = surface
-            .get_default_config(&gpu.adapter, width, height)
-            .unwrap();
-        surface.configure(&gpu.device, &config);
-
-        Self { window, surface }
-    }
-}
-
-impl WindowHandler for Menu<'_> {}
-
 struct Gpu {
     pub instance: wgpu::Instance,
     pub adapter: wgpu::Adapter,
@@ -148,6 +127,27 @@ impl winit::application::ApplicationHandler for App {
         }
     }
 }
+
+struct Menu<'a> {
+    window: std::sync::Arc<winit::window::Window>,
+    surface: wgpu::Surface<'a>,
+}
+
+impl Menu<'_> {
+    fn new(gpu: &Gpu, window: std::sync::Arc<winit::window::Window>) -> Self {
+        let winit::dpi::PhysicalSize { width, height } = window.inner_size();
+
+        let surface = gpu.instance.create_surface(window.clone()).unwrap();
+        let config = surface
+            .get_default_config(&gpu.adapter, width, height)
+            .unwrap();
+        surface.configure(&gpu.device, &config);
+
+        Self { window, surface }
+    }
+}
+
+impl WindowHandler for Menu<'_> {}
 
 fn main() {
     block_on(async {
