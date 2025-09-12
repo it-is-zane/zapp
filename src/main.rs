@@ -24,8 +24,12 @@ fn block_on<T>(future: impl std::future::Future<Output = T>) -> T {
     }
 }
 
-type WindowHandlerInitilizer =
-    Box<dyn Fn(&Gpu, std::sync::Arc<winit::window::Window>) -> Box<dyn WindowHandler>>;
+type WindowHandlerInitilizer = Box<
+    dyn Fn(
+        &Gpu,
+        &winit::event_loop::ActiveEventLoop,
+    ) -> (winit::window::WindowId, Box<dyn WindowHandler>),
+>;
 
 enum Command {
     Nothing,
@@ -124,15 +128,9 @@ impl winit::application::ApplicationHandler for App {
             resumed_fn,
         } = &self;
 
-        let window = event_loop
-            .create_window(winit::window::WindowAttributes::default())
-            .unwrap();
+        let (id, window_handler) = (resumed_fn)(&self.gpu, event_loop);
 
-        let id = window.id();
-
-        let window_handler = Menu::new(&self.gpu, std::sync::Arc::new(window));
-
-        self.windows.insert(id, Box::new(window_handler));
+        self.windows.insert(id, window_handler);
     }
 
     fn window_event(
@@ -149,13 +147,7 @@ impl winit::application::ApplicationHandler for App {
             Command::Nothing => {}
             Command::RemoveWindow(window_id) => drop(self.windows.remove(&window_id)),
             Command::AddWindow(f) => {
-                let window = event_loop
-                    .create_window(winit::window::WindowAttributes::default())
-                    .unwrap();
-
-                let id = window.id();
-
-                let window_handler = (f)(&self.gpu, std::sync::Arc::new(window));
+                let (id, window_handler) = (f)(&self.gpu, event_loop);
 
                 _ = self.windows.insert(id, window_handler);
             }
@@ -169,7 +161,17 @@ fn main() {
 
         let mut app = App::new(
             Gpu::new().await,
-            Box::new(|gpu, window| Box::new(Menu::new(gpu, window))),
+            Box::new(|gpu, event_loop| {
+                let window = std::sync::Arc::new(
+                    event_loop
+                        .create_window(winit::window::WindowAttributes::default())
+                        .unwrap(),
+                );
+
+                let id = window.id();
+
+                (id, Box::new(Menu::new(gpu, window)))
+            }),
         );
 
         event_loop.set_control_flow(winit::event_loop::ControlFlow::Wait);
