@@ -169,8 +169,9 @@ fn main() {
                 );
 
                 let id = window.id();
+                let window_handler = Box::new(Menu::new(gpu, window));
 
-                (id, Box::new(Menu::new(gpu, window)))
+                (id, window_handler)
             }),
         );
 
