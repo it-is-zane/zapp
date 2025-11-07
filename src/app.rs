@@ -64,7 +64,7 @@ impl winit::application::ApplicationHandler for App {
         match handler.window_event(event_loop, event, &self.gpu) {
             Command::Nothing => {}
             Command::RemoveWindow(window_id) => {
-                _ = self.gpu.device.poll(wgpu::PollType::Wait);
+                _ = self.gpu.device.poll(wgpu::PollType::wait_indefinitely());
                 drop(self.windows.remove(&window_id));
             }
             Command::AddWindow(f) => {
@@ -75,7 +75,7 @@ impl winit::application::ApplicationHandler for App {
         }
 
         if self.windows.is_empty() {
-            _ = self.gpu.device.poll(wgpu::PollType::Wait);
+            _ = self.gpu.device.poll(wgpu::PollType::wait_indefinitely());
             event_loop.exit();
         }
     }

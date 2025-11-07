@@ -2,7 +2,6 @@
 
 mod app;
 mod render;
-mod text;
 mod util;
 
 // create views from data
@@ -18,16 +17,19 @@ mod util;
 
 struct DevWindow<'a> {
     window_id: winit::window::WindowId,
-    window: std::sync::Arc<winit::window::Window>,
     surface: wgpu::Surface<'a>,
     surface_config: wgpu::SurfaceConfiguration,
     command_encoder_descriptor: wgpu::CommandEncoderDescriptor<'a>,
     texture_view_descriptor: wgpu::TextureViewDescriptor<'a>,
-    text_renderer: text::TextRenderer,
-    text: text::GpuTextObject,
-    window_size: wgpu::Buffer,
-    viewport_bind_group: wgpu::BindGroup,
-    window_creation: std::time::Instant,
+
+    font_system: glyphon::FontSystem,
+    swach_cache: glyphon::SwashCache,
+    viewport: glyphon::Viewport,
+    atlas: glyphon::TextAtlas,
+    text_renderer: glyphon::TextRenderer,
+    text_buffer: glyphon::Buffer,
+
+    window: std::sync::Arc<winit::window::Window>,
 }
 
 impl app::WindowHandler for DevWindow<'_> {
@@ -47,16 +49,42 @@ impl app::WindowHandler for DevWindow<'_> {
             winit::event::WindowEvent::Resized(size) => {
                 self.surface_config.width = size.width;
                 self.surface_config.height = size.height;
-
                 self.surface.configure(&gpu.device, &self.surface_config);
 
-                gpu.queue.write_buffer(
-                    &self.window_size,
-                    0,
-                    util::as_bytes(&nalgebra::Vector2::new(size.width, size.height).cast::<f32>()),
+                self.viewport.update(
+                    &gpu.queue,
+                    glyphon::Resolution {
+                        width: size.width,
+                        height: size.height,
+                    },
                 );
             }
             winit::event::WindowEvent::RedrawRequested => {
+                self.text_renderer
+                    .prepare(
+                        &gpu.device,
+                        &gpu.queue,
+                        &mut self.font_system,
+                        &mut self.atlas,
+                        &self.viewport,
+                        [glyphon::TextArea {
+                            buffer: &self.text_buffer,
+                            left: 10.0,
+                            top: 10.0,
+                            scale: 1.0,
+                            bounds: glyphon::TextBounds {
+                                left: 0,
+                                top: 0,
+                                right: self.surface_config.width as i32,
+                                bottom: self.surface_config.height as i32,
+                            },
+                            default_color: glyphon::Color::rgb(255, 255, 255),
+                            custom_glyphs: &[],
+                        }],
+                        &mut self.swach_cache,
+                    )
+                    .unwrap();
+
                 let mut encoder = gpu
                     .device
                     .create_command_encoder(&self.command_encoder_descriptor);
@@ -71,18 +99,19 @@ impl app::WindowHandler for DevWindow<'_> {
                             depth_slice: None,
                             resolve_target: None,
                             ops: wgpu::Operations {
-                                load: wgpu::LoadOp::Clear(wgpu::Color::WHITE),
+                                load: wgpu::LoadOp::Clear(wgpu::Color::BLACK),
                                 ..Default::default()
                             },
                         })],
                         ..Default::default()
                     });
 
-                    pass.set_bind_group(0, Some(&self.viewport_bind_group), &[]);
-
-                    self.text_renderer.render(&mut pass, &self.text);
+                    self.text_renderer
+                        .render(&self.atlas, &self.viewport, &mut pass)
+                        .unwrap();
                 }
 
+                self.window.pre_present_notify();
                 gpu.queue.submit([encoder.finish()]);
                 texture.present();
             }
@@ -90,7 +119,7 @@ impl app::WindowHandler for DevWindow<'_> {
                 return app::Command::RemoveWindow(self.window_id);
             }
             _ => {
-                println!("{event:?}");
+                // println!("{event:?}");
             }
         }
 
@@ -100,7 +129,7 @@ impl app::WindowHandler for DevWindow<'_> {
 
 fn main() {
     let event_loop = winit::event_loop::EventLoop::builder().build().unwrap();
-    let gpu = util::block_on(render::GpuContext::new());
+    let gpu = util::block_on(render::GpuContext::new()).unwrap();
 
     let mut app = app::App::new(
         gpu,
@@ -136,70 +165,60 @@ fn main() {
                 ..Default::default()
             };
 
-            let text_renderer = text::TextRenderer::new(
-                serde_json::from_str(include_str!("atlas.json")).unwrap(),
-                image::load_from_memory(include_bytes!("atlas.png"))
-                    .unwrap()
-                    .to_rgba8(),
-                gpu,
-                surface_config.format,
-            )
-            .unwrap();
+            let mut font_system = glyphon::FontSystem::new();
+            font_system.db_mut().load_system_fonts();
 
-            let mut text = text_renderer.create_gpu_text_object(gpu, "Happy Birthday\nMom!");
-
-            text.set_transform(
-                gpu,
-                nalgebra::Matrix4::identity()
-                    .append_translation(&nalgebra::Vector3::new(-1.0, 1.0, 0.0)),
-            );
-
-            let window_size = wgpu::util::DeviceExt::create_buffer_init(
+            let swach_cache = glyphon::SwashCache::new();
+            let cache = glyphon::Cache::new(&gpu.device);
+            let viewport = glyphon::Viewport::new(&gpu.device, &cache);
+            let mut atlas =
+                glyphon::TextAtlas::new(&gpu.device, &gpu.queue, &cache, surface_config.format);
+            let text_renderer = glyphon::TextRenderer::new(
+                &mut atlas,
                 &gpu.device,
-                &wgpu::util::BufferInitDescriptor {
-                    label: Some("Window Size Vector"),
-                    contents: util::as_bytes(
-                        &nalgebra::Vector2::new(size.width, size.height).cast::<f32>(),
-                    ),
-                    usage: wgpu::BufferUsages::UNIFORM | wgpu::BufferUsages::COPY_DST,
-                },
+                wgpu::MultisampleState::default(),
+                None,
             );
+            let mut text_buffer =
+                glyphon::Buffer::new(&mut font_system, glyphon::Metrics::new(30.0, 42.0));
 
-            let viewport_bind_group = gpu.device.create_bind_group(&wgpu::BindGroupDescriptor {
-                label: Some("Viewport Info"),
-                layout: &text_renderer.get_viewport_bind_group_layout(),
-                entries: &[wgpu::BindGroupEntry {
-                    binding: 0,
-                    resource: wgpu::BindingResource::Buffer(wgpu::BufferBinding {
-                        buffer: &window_size,
-                        offset: 0,
-                        size: std::num::NonZero::new(
-                            std::mem::size_of::<nalgebra::Vector2<f32>>() as u64
-                        ),
-                    }),
-                }],
-            });
+            text_buffer.set_size(
+                &mut font_system,
+                Some((window.inner_size().width as f64 * window.scale_factor()) as f32),
+                Some((window.inner_size().height as f64 * window.scale_factor()) as f32),
+            );
+            text_buffer.set_text(
+                &mut font_system,
+                "Zane Gant!☻",
+                &glyphon::Attrs::new().family(glyphon::Family::SansSerif),
+                glyphon::Shaping::Advanced,
+            );
+            text_buffer.shape_until_scroll(&mut font_system, false);
 
             (
                 window_id,
                 Box::new(DevWindow {
                     window_id,
-                    window,
                     surface,
                     surface_config,
                     command_encoder_descriptor,
                     texture_view_descriptor,
+                    font_system,
+                    swach_cache,
+                    viewport,
+                    atlas,
                     text_renderer,
-                    text,
-                    window_size,
-                    viewport_bind_group,
-                    window_creation: std::time::Instant::now(),
+                    text_buffer,
+                    window,
                 }),
             )
         }),
     );
 
-    event_loop.set_control_flow(winit::event_loop::ControlFlow::Wait);
+    event_loop.set_control_flow(winit::event_loop::ControlFlow::wait_duration(
+        std::time::Duration::from_secs_f64(1.0 / 60.0),
+    ));
+
     _ = event_loop.run_app(&mut app);
 
     std::process::exit(0);

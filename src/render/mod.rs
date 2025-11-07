@@ -6,25 +6,31 @@ pub struct GpuContext {
     pub queue: wgpu::Queue,
 }
 
+#[derive(Debug)]
+pub enum RequestError {
+    Adapter(#[allow(dead_code)] wgpu::RequestAdapterError),
+    Device(#[allow(dead_code)] wgpu::RequestDeviceError),
+}
+
 impl GpuContext {
-    pub async fn new() -> Self {
+    pub async fn new() -> Result<Self, RequestError> {
         let instance = wgpu::Instance::new(&wgpu::InstanceDescriptor::default());
 
         let adapter = instance
             .request_adapter(&wgpu::RequestAdapterOptionsBase::default())
             .await
-            .unwrap();
+            .map_err(RequestError::Adapter)?;
 
         let (device, queue) = adapter
             .request_device(&wgpu::DeviceDescriptor::default())
             .await
-            .unwrap();
+            .map_err(RequestError::Device)?;
 
-        Self {
+        Ok(Self {
             instance,
             adapter,
             device,
             queue,
-        }
+        })
     }
 }
