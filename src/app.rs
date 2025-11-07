@@ -1,54 +1,53 @@
-pub enum Command {
+pub enum Command<State> {
     Nothing,
     RemoveWindow(winit::window::WindowId),
-    AddWindow(WindowHandlerInitilizer),
+    AddWindow(WindowHandlerInitilizer<State>),
 }
 
-pub trait WindowHandler {
+pub trait WindowHandler<State> {
     fn window_event(
         &mut self,
+        app_state: &mut State,
         event_loop: &winit::event_loop::ActiveEventLoop,
         event: winit::event::WindowEvent,
-        gpu: &crate::render::GpuContext,
-    ) -> Command {
+    ) -> Command<State> {
         Command::Nothing
     }
 }
 
-pub type WindowHandlerInitilizer = Box<
+pub type WindowHandlerInitilizer<State> = Box<
     dyn Fn(
-        &crate::render::GpuContext,
+        &mut State,
         &winit::event_loop::ActiveEventLoop,
-    ) -> (winit::window::WindowId, Box<dyn WindowHandler>),
+    ) -> (winit::window::WindowId, Box<dyn WindowHandler<State>>),
 >;
 
-pub struct App {
-    pub windows: std::collections::HashMap<winit::window::WindowId, Box<dyn WindowHandler>>,
+pub struct AppState {
     pub gpu: crate::render::GpuContext,
-    pub resumed_fn: WindowHandlerInitilizer,
+    pub font_system: glyphon::FontSystem,
 }
 
-impl App {
-    pub fn new(gpu: crate::render::GpuContext, resumed_fn: WindowHandlerInitilizer) -> Self {
+pub struct App<State> {
+    pub windows: std::collections::HashMap<winit::window::WindowId, Box<dyn WindowHandler<State>>>,
+    pub resumed_fn: WindowHandlerInitilizer<State>,
+    app_state: State,
+}
+
+impl<State> App<State> {
+    pub fn new(app_state: State, resumed_fn: WindowHandlerInitilizer<State>) -> Self {
         Self {
             windows: std::collections::HashMap::new(),
-            gpu,
             resumed_fn,
+            app_state,
         }
     }
 }
 
-impl winit::application::ApplicationHandler for App {
+impl<State> winit::application::ApplicationHandler for App<State> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
-        let Self {
-            gpu,
-            windows,
-            resumed_fn,
-        } = self;
+        let (id, window_handler) = (self.resumed_fn)(&mut self.app_state, event_loop);
 
-        let (id, window_handler) = (resumed_fn)(gpu, event_loop);
-
-        windows.insert(id, window_handler);
+        self.windows.insert(id, window_handler);
     }
 
     fn window_event(
@@ -61,14 +60,13 @@ impl winit::application::ApplicationHandler for App {
             return;
         };
 
-        match handler.window_event(event_loop, event, &self.gpu) {
+        match handler.window_event(&mut self.app_state, event_loop, event) {
             Command::Nothing => {}
             Command::RemoveWindow(window_id) => {
-                _ = self.gpu.device.poll(wgpu::PollType::wait_indefinitely());
                 drop(self.windows.remove(&window_id));
             }
             Command::AddWindow(f) => {
-                let (id, window_handler) = (f)(&self.gpu, event_loop);
+                let (id, window_handler) = (f)(&mut self.app_state, event_loop);
 
                 assert!(
                     self.windows.insert(id, window_handler).is_none(),
@@ -78,7 +76,6 @@ impl winit::application::ApplicationHandler for App {
         }
 
         if self.windows.is_empty() {
-            _ = self.gpu.device.poll(wgpu::PollType::wait_indefinitely());
             event_loop.exit();
         }
     }
