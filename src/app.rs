@@ -70,7 +70,10 @@ impl winit::application::ApplicationHandler for App {
             Command::AddWindow(f) => {
                 let (id, window_handler) = (f)(&self.gpu, event_loop);
 
-                _ = self.windows.insert(id, window_handler);
+                assert!(
+                    self.windows.insert(id, window_handler).is_none(),
+                    "tried to add a new window with an already existing id"
+                );
             }
         }
 
