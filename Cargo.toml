@@ -4,13 +4,11 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-glyphon = "0.9.0"
+glyphon = "0.10.0"
 image = "0.25.8"
 nalgebra = { version = "0.34.1", features = ["serde-serialize"] }
 serde = { version = "1.0.228", features = ["derive"] }
 serde_json = "1.0.145"
-wgpu = "27.0.1"
+smol = "2.0.2"
+wgpu = "28.0.0"
 winit = "0.30.12"
-
-[patch.crates-io]
-glyphon = { git = "https://github.com/grovesNL/glyphon" }

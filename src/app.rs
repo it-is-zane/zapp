@@ -1,43 +1,49 @@
 pub enum Command<State> {
-    Nothing,
     RemoveWindow(winit::window::WindowId),
-    AddWindow(WindowHandlerInitilizer<State>),
+    AddWindow(Box<dyn WindowHandler<State>>),
 }
 
 pub trait WindowHandler<State> {
     fn window_event(
         &mut self,
         app_state: &mut State,
-        event_loop: &winit::event_loop::ActiveEventLoop,
+        window: &winit::window::Window,
         event: winit::event::WindowEvent,
-    ) -> Command<State> {
-        Command::Nothing
+    ) -> Vec<Command<State>> {
+        Vec::new()
+    }
+
+    fn window_attributes(&mut self) -> winit::window::WindowAttributes {
+        winit::window::WindowAttributes::default()
     }
 }
 
-pub type WindowHandlerInitilizer<State> = Box<
-    dyn Fn(
-        &mut State,
-        &winit::event_loop::ActiveEventLoop,
-    ) -> (winit::window::WindowId, Box<dyn WindowHandler<State>>),
->;
-
-pub struct AppState {
-    pub gpu: crate::render::GpuContext,
-    pub font_system: glyphon::FontSystem,
-}
+type InitFn<T, State> = fn(&mut State, window: &std::sync::Arc<winit::window::Window>) -> T;
 
 pub struct App<State> {
-    pub windows: std::collections::HashMap<winit::window::WindowId, Box<dyn WindowHandler<State>>>,
-    pub resumed_fn: WindowHandlerInitilizer<State>,
+    new_window_queue: Vec<(
+        InitFn<Box<dyn WindowHandler<State>>, State>,
+        winit::window::WindowAttributes,
+    )>,
+    windows: std::collections::HashMap<
+        winit::window::WindowId,
+        (
+            std::sync::Arc<winit::window::Window>,
+            Box<dyn WindowHandler<State>>,
+        ),
+    >,
     app_state: State,
 }
 
 impl<State> App<State> {
-    pub fn new(app_state: State, resumed_fn: WindowHandlerInitilizer<State>) -> Self {
+    pub fn new(
+        app_state: State,
+        window_handler: InitFn<Box<dyn WindowHandler<State>>, State>,
+        window_attributes: winit::window::WindowAttributes,
+    ) -> Self {
         Self {
+            new_window_queue: vec![(window_handler, window_attributes)],
             windows: std::collections::HashMap::new(),
-            resumed_fn,
             app_state,
         }
     }
@@ -45,9 +51,12 @@ impl<State> App<State> {
 
 impl<State> winit::application::ApplicationHandler for App<State> {
     fn resumed(&mut self, event_loop: &winit::event_loop::ActiveEventLoop) {
-        let (id, window_handler) = (self.resumed_fn)(&mut self.app_state, event_loop);
+        for (window_handler, window_attributes) in self.new_window_queue.drain(..) {
+            let window = std::sync::Arc::new(event_loop.create_window(window_attributes).unwrap());
+            let window_handler = window_handler(&mut self.app_state, &window);
 
-        self.windows.insert(id, window_handler);
+            self.windows.insert(window.id(), (window, window_handler));
+        }
     }
 
     fn window_event(
@@ -56,22 +65,24 @@ impl<State> winit::application::ApplicationHandler for App<State> {
         window_id: winit::window::WindowId,
         event: winit::event::WindowEvent,
     ) {
-        let Some(handler) = self.windows.get_mut(&window_id) else {
+        let Some((window, handler)) = self.windows.get_mut(&window_id) else {
             return;
         };
 
-        match handler.window_event(&mut self.app_state, event_loop, event) {
-            Command::Nothing => {}
-            Command::RemoveWindow(window_id) => {
-                drop(self.windows.remove(&window_id));
-            }
-            Command::AddWindow(f) => {
-                let (id, window_handler) = (f)(&mut self.app_state, event_loop);
+        for command in handler.window_event(&mut self.app_state, window, event) {
+            match command {
+                Command::RemoveWindow(window_id) => {
+                    drop(self.windows.remove(&window_id));
+                }
+                Command::AddWindow(mut new_handler) => {
+                    let window = std::sync::Arc::new(
+                        event_loop
+                            .create_window(new_handler.window_attributes())
+                            .unwrap(),
+                    );
 
-                assert!(
-                    self.windows.insert(id, window_handler).is_none(),
-                    "tried to add a new window with an already existing id"
-                );
+                    self.windows.insert(window.id(), (window, new_handler));
+                }
             }
         }
 
