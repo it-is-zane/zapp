@@ -23,8 +23,6 @@ enum StartStop {
 impl std::fmt::Debug for StartStop {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            // Self::Start(arg0) => f.debug_tuple("Start").field(arg0).finish(),
-            // Self::Stop(arg0) => f.debug_tuple("Stop").field(arg0).finish(),
             Self::Start(_) => f.debug_tuple("Start").finish(),
             Self::Stop(_) => f.debug_tuple("Stop").finish(),
         }
@@ -42,7 +40,6 @@ struct DevWindow<'a> {
     text_buffer: glyphon::Buffer,
 
     starts_and_stops: Vec<StartStop>,
-    _fps_thread: std::thread::JoinHandle<()>,
 }
 
 impl DevWindow<'_> {
@@ -78,8 +75,6 @@ impl DevWindow<'_> {
             glyphon::Metrics::new(30.0, 42.0),
         );
 
-        let weak_window = std::sync::Arc::downgrade(window);
-
         DevWindow {
             window_id: window.id(),
             surface,
@@ -89,13 +84,6 @@ impl DevWindow<'_> {
             viewport,
             text_buffer,
             starts_and_stops: Vec::new(),
-            _fps_thread: std::thread::spawn(move || {
-                while let Some(window) = weak_window.upgrade() {
-                    window.request_redraw();
-                    drop(window);
-                    std::thread::sleep(std::time::Duration::from_secs(1));
-                }
-            }),
         }
     }
 }
@@ -124,19 +112,68 @@ impl app::WindowHandler<AppState> for DevWindow<'_> {
                 ..
             } => match text.as_str() {
                 " " => {
-                    window.request_redraw();
-                    self.starts_and_stops
-                        .push(match self.starts_and_stops.last() {
-                            Some(StartStop::Start(_)) => StartStop::Stop(std::time::Instant::now()),
-                            Some(StartStop::Stop(_)) => StartStop::Start(std::time::Instant::now()),
-                            None => StartStop::Start(std::time::Instant::now()),
+                    let total: std::time::Duration = self
+                        .starts_and_stops
+                        .chunks(2)
+                        .map(|s| match s {
+                            [StartStop::Start(a), StartStop::Stop(b)] => b.duration_since(*a),
+                            [StartStop::Start(a)] => a.elapsed(),
+                            a => {
+                                todo!("was not expecting {a:?}")
+                            }
                         })
+                        .sum();
+
+                    let (start_stop, control_flow) = match self.starts_and_stops.last() {
+                        Some(StartStop::Start(_)) => {
+                            let seconds = total.as_secs() % 60;
+                            let minutes = (total.as_secs() / 60) % 60;
+                            let hours = (total.as_secs() / 60) / 60;
+
+                            println!("total {hours}h {minutes}m {seconds}s");
+
+                            (
+                                StartStop::Stop(std::time::Instant::now()),
+                                winit::event_loop::ControlFlow::Wait,
+                            )
+                        }
+                        Some(StartStop::Stop(stopped)) => {
+                            let stopped = stopped.elapsed();
+
+                            let seconds = stopped.as_secs() % 60;
+                            let minutes = (stopped.as_secs() / 60) % 60;
+                            let hours = (stopped.as_secs() / 60) / 60;
+
+                            println!("stopped for {hours}h {minutes}m {seconds}s");
+
+                            (
+                                StartStop::Start(std::time::Instant::now()),
+                                winit::event_loop::ControlFlow::wait_duration(
+                                    std::time::Duration::from_secs_f32(
+                                        2.0 - total.as_secs_f32() % 1.0,
+                                    ),
+                                ),
+                            )
+                        }
+                        None => (
+                            StartStop::Start(std::time::Instant::now()),
+                            winit::event_loop::ControlFlow::wait_duration(
+                                std::time::Duration::from_secs(1),
+                            ),
+                        ),
+                    };
+
+                    self.starts_and_stops.push(start_stop);
+
+                    window.request_redraw();
+
+                    return vec![app::Command::SetControlFlow(control_flow)];
                 }
                 "r" => {
-                    window.request_redraw();
                     self.starts_and_stops.clear();
+                    window.request_redraw();
                 }
-                s => println!("{s}"),
+                _ => (),
             },
             winit::event::WindowEvent::Resized(size) => {
                 self.surface_config.width = size.width;
@@ -257,6 +294,41 @@ impl app::WindowHandler<AppState> for DevWindow<'_> {
 
     fn window_attributes(&mut self) -> winit::window::WindowAttributes {
         winit::window::WindowAttributes::default().with_decorations(false)
+    }
+
+    fn new_events(
+        &mut self,
+        app_state: &mut AppState,
+        window: &winit::window::Window,
+        cause: winit::event::StartCause,
+    ) -> Vec<app::Command<AppState>> {
+        match cause {
+            winit::event::StartCause::ResumeTimeReached {
+                start: _,
+                requested_resume: _,
+            } => {
+                window.request_redraw();
+
+                let total: std::time::Duration = self
+                    .starts_and_stops
+                    .chunks(2)
+                    .map(|s| match s {
+                        [StartStop::Start(a), StartStop::Stop(b)] => b.duration_since(*a),
+                        [StartStop::Start(a)] => a.elapsed(),
+                        a => {
+                            todo!("was not expecting {a:?}")
+                        }
+                    })
+                    .sum();
+
+                vec![app::Command::SetControlFlow(
+                    winit::event_loop::ControlFlow::wait_duration(
+                        std::time::Duration::from_secs_f32(1.0 - total.as_secs_f32() % 1.0),
+                    ),
+                )]
+            }
+            _ => vec![],
+        }
     }
 }
 
