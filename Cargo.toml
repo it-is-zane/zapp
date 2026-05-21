@@ -1,7 +1,11 @@
 [package]
-name = "stopwatch"
+name = "zapp"
 version = "0.1.0"
 edition = "2024"
+
+[lib]
+name = "zapp"
+version = "0.1.0"
 
 [dependencies]
 glyphon = "0.10.0"
