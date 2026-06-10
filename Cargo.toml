@@ -8,11 +8,10 @@ name = "zapp"
 version = "0.1.0"
 
 [dependencies]
+glam = { version = "0.33", features = ["bytemuck"] }
 glyphon = "0.11"
 image = "0.25"
-nalgebra = { version = "0.35", features = ["serde-serialize"] }
-serde = { version = "1.0", features = ["derive"] }
-serde_json = "1.0"
 smol = "2.0"
 wgpu = "29"
+wgsl_bindgen = "0.22"
 winit = "0.30"
